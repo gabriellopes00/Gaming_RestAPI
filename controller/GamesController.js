@@ -40,7 +40,7 @@ router.post('/game', async (req, res) => {
           price: Number(price),
           company: company
         })  
-        res.status(201).redirect('/games');
+        res.sendStatus(201)
       } catch (error) {
         console.log(error);
         res.status(400).send('Something happened');
