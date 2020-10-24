@@ -1,7 +1,7 @@
 # { Games : Rest API } 🎮
 
 <div class="row">
-  <img width="50%" height="160px" src="./.github/restapi.jpg">
+  <img width="40%" height="160px" src="./.github/restapi.jpg">
   <img width="40%" height="160px" src="./.github/games.svg">
 </div>
 
@@ -23,14 +23,14 @@ git clone https://github.com/gabriellopes00/Happy.git
 
 #### Running with yarn 🐿
 ```ssh
-cd Games_RestAPi
+cd Games_APiRest
 yarn install
 yarn dev
 ```
 
 #### Running with npm 🔧
 ```ssh
-cd Games_RestAPi
+cd Games_APiRest
 npm install
 npm run dev
 ```
