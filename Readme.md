@@ -1,7 +1,9 @@
 # { Games : Rest API } 🎮
 
-<img width="50%" src="./.github/restapi.jpg">
-<img width="50%" src="./.github/games.svg">
+<div class="row">
+  <img width="50%" src="./.github/restapi.jpg">
+  <img width="40%" src="./.github/games.svg">
+</div>
 
 ## About API 📚
 This is an Rest API witch the users can see a Games list, registered in database. However, when the users register themselves, they have free access to some routes, in witch, they can **register a new game**, **delete a existing game** and **update or change information about some game**. This Rest API was made to learn more about the *http* methods and see the *http's* status code.
