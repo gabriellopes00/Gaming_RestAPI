@@ -21,7 +21,7 @@ const Games = dbConnection.define('games', {
   }
 })
 
-Games.sync({foce: false})
+/*  Games.sync({foce: false})  */
 
 export default Games;
 

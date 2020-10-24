@@ -3,10 +3,13 @@
   import bodyParser from 'body-parser';
   import cors from 'cors';
 
+  //db Authentication
   import dbAuthentication from './database/authenticate'
   dbAuthentication.Authenticate(); 
-
+  
+  //db Tables
   import games from './controller/GamesController';
+  import users from './controller/UsersController';
   
 
 const app = express();
@@ -14,8 +17,9 @@ app.use(cors())
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-app.use('/', games);
-
+//Routes
+  app.use('/games', games);
+  app.use('/users', users);
 
 const port = 3333;
 app.listen(port, err =>{

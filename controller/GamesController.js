@@ -2,39 +2,42 @@
   import express from 'express'
   const router = express.Router();
 
-  import Games from '../models/games';
+  import Games from '../model/Games';
 
-router.get('/games', async (req, res) => {
+  import Auth from '../middleware/authentication'
+
+router.get('/', async (req, res) => {
+  req.loggedUser && res.send(req.loggedUser);
   try {
-    const gamesReturned = await Games.findAll();
-    gamesReturned ? res.status(200).json(gamesReturned) : res.status(200).send('Any game registered')
+    const gamesReturned = await Games.findAll();  //Founding games
+    gamesReturned ? res.status(200).json(gamesReturned) : res.sendStatus(204);
   } catch (err) {
     console.log(err);
-    return res.status(400).json({message: err.message})
+    return res.sendStatus(400);
   }
   
 })
-router.get('/game/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
   let { id } = req.params;
 
-  if(isNaN(id)) res.status(400).send('Invalid params') //Bad Request
+  if(isNaN(id)) res.sendStatus(400); //Bad Request => Invalid data received
   else{
     let idNumber = parseInt(id);
 
-    let gamesReturned  = await Games.findOne({where: {id: idNumber}})
-    gamesReturned ? res.status(200).json(gamesReturned) : res.status(404).send('Game not found');
+    let gamesReturned  = await Games.findOne({where: {id: idNumber}}) //Founding unique game
+    gamesReturned ? res.status(200).json(gamesReturned) : res.sendStatus(404);
   }
   
 })
 
-router.post('/game', async (req, res) => {
+router.post('/', Auth, async (req, res) => {
   let {title, year, price, company} = req.body;
 
   //Request Validation
   if(title != undefined && !isNaN(price)&&
     company != undefined && !isNaN(year)){
       try {
-        await Games.create({
+        await Games.create({  // Creating game
           title: title,
           year: Number(year),
           price: Number(price),
@@ -43,62 +46,60 @@ router.post('/game', async (req, res) => {
         res.sendStatus(201)
       } catch (error) {
         console.log(error);
-        res.status(400).send('Something happened');
+        res.sendStatus(500);
       }
-  } else return res.status(400).send('Invalid data received')//Bad Request
+  } else return res.sendStatus(400); //Bad Request => Invalid data received
 })
   
-router.delete('/game/:id', async (req, res) => {
+router.delete('/:id', Auth, async (req, res) => {
   let {id} = req.params;
 
-  if(isNaN(id)) res.status(400).send('Invalid params')//Bad Request
+  if(isNaN(id)) res.sendStatus(400);//Bad Request => Invalid data received
   else{
     try {
-      let deletedSuccessfully;
       let found = await Games.findOne({where: {id: id}})
       if(found) {
-        deletedSuccessfully = await Games.destroy({where: {id: id}}) 
-        res.status(200).send('Game deleted successfully')
-      }else res.status(400).send('Game not found')
+        await Games.destroy({where: {id: id}}) 
+        res.sendStatus(200);
+      }else res.sendStatus(404);
       
     } catch (error) {
       console.log(error);
-      res.status(400).send('Somethig happened')
+      res.sendStatus(500);
     }
   }
 })
 
-router.put('/game/:id', async (req, res) => {
+router.put('/:id', Auth, async (req, res) => {
   let {id} = req.params;
 
-  if(isNaN(id)) return res.status(400).send('Invalid params'); //Bad Request
+  if(isNaN(id)) return res.sendStatus(400); //Bad Request
   else{
     let game = await Games.findOne({where: {id: id}});    
-    if (!game) res.status(404).send('Game not found');        
+    if (!game) res.sendStatus(404);       
     else {
       let {title, price, year, company} = req.body;
       
       if(title != undefined && !isNaN(price)&&
       company != undefined && !isNaN(year)){
         try {
-          await Games.update({
+          await Games.update({  //Updating the game
             title: title,
             company: company,
             price: price,
             year: year,
           },
           {where: {id: id}})
-          res.status(200).send('Game updated successfully')
+          res.sendStatus(200)
         } catch (error) {
           console.log(error);
-          res.status(400).status('Something happened, and the game was not deleted.')
+          res.sendStatus(500)
         }
-      }else res.status(400).send('Invalid Values')
+      }else res.sendStatus(400);
     }
   }
   
 
 })
 
-  export default router;
-  
+export default router;  
