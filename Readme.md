@@ -1,8 +1,8 @@
 # { Games : Rest API } 🎮
 
 <div class="row">
-  <img width="50%" src="./.github/restapi.jpg">
-  <img width="40%" src="./.github/games.svg">
+  <img width="50%" height="200px" src="./.github/restapi.jpg">
+  <img width="40%" height="200px" src="./.github/games.svg">
 </div>
 
 ## About API 📚
