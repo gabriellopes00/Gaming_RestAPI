@@ -1,5 +1,5 @@
 {
-  "name": "GamesApi_Rest",
+  "name": "Games_Rest_API",
   "version": "1.0.0",
   "description": "An Api that list a games list.",
   "main": "app.js",
@@ -10,14 +10,17 @@
     "babel-preset-es2015": "^6.24.1"
   },
   "scripts": {
-    "dev": "nodemon --exec babel-node app"
+    "dev": "nodemon --exec babel-node app",
+    "test": "nodemon --exec babel-node ./validators/validation"
   },
   "dependencies": {
+    "@types/yup": "^0.29.8",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "mysql2": "^2.2.5",
-    "sequelize": "^6.3.5"
+    "sequelize": "^6.3.5",
+    "yup": "^0.29.3"
   }
 }

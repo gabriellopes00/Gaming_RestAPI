@@ -9,24 +9,21 @@
   import jwt from 'jsonwebtoken';
   const jwtSecret = 'fghfi5apEPgabGdte5iHJapf6d3apohSFaLhp90ydqLpfu48';
 
+  //Validations
+  import Validator from '../validators/validation';
+
 // User Registration  
 router.post('/', async (req, res) => {
-  let {email, name, password} = req.body;
-
-  if(!email || !name || !password) res.sendStatus(400);
-  else{
+  const data = req.body;
     try {
-      await Users.create({
-        name: String(name),
-        email: String(email),
-        password: String(password),
-      });
+      await Validator.userValidation.validate(data);
+      await Users.create(data);
       res.sendStatus(201);
     } catch (error) {
-      res.sendStatus(500);
+      console.log(error);
+      error.name === 'ValidationError' ? res.sendStatus(400) : res.sendStatus(500);
+      //If error is not "ValidationError", is because yup validation successfully, but something happened in sequelize;
     };
-    
-  };
 });
 
 // User Login
