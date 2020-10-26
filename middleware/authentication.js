@@ -14,7 +14,7 @@ function Authentication(req, res, next){
         req.loggedUser = {token, email: data.email, id: data.id};
         next(); 
       }
-  })
+    })
   }
 }
 

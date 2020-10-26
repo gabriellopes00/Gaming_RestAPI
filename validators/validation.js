@@ -1,6 +1,8 @@
 //yup validator
 import * as Yup from 'yup';
 
+const year = new Date().getFullYear();
+
 class Validation{
   constructor(){
     this.userValidation = Yup.object().shape({
@@ -11,7 +13,7 @@ class Validation{
 
     this.gamesValidation = Yup.object().shape({
       title: Yup.string().required(),
-      year: Yup.number().required().positive().integer(),
+      year: Yup.number().required().positive().integer().max(year),
       price: Yup.number().required().positive(),
       company: Yup.string().required()
     })

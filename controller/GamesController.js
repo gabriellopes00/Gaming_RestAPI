@@ -51,7 +51,7 @@ router.post('/', Auth, async (req, res) => {
 router.delete('/:id', Auth, async (req, res) => {
   let {id} = req.params;
 
-  if(isNaN(Number(id))) res.sendStatus(400);//Bad Request => Invalid data received
+  if(isNaN(id)) res.sendStatus(400);//Bad Request => Invalid data received
   else{
     try {
       let found = await Games.findOne({where: {id: id}})
@@ -70,7 +70,7 @@ router.delete('/:id', Auth, async (req, res) => {
 router.put('/:id', Auth, async (req, res) => {
   let {id} = req.params;
 
-  if(isNaN(Number(id))) res.sendStatus(400); //Bad Request
+  if(isNaN(id)) res.sendStatus(400); //Bad Request
   else{   
     try {
       let game = await Games.findOne({where: {id: id}});    
@@ -89,4 +89,8 @@ router.put('/:id', Auth, async (req, res) => {
 
 })
 
+
+router.post('/test', Auth, async (req, res) => {
+  res.send('Entrou;')
+})
 export default router;  
