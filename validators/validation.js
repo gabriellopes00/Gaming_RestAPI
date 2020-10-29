@@ -12,14 +12,16 @@ class Validation{
     })
 
     this.gamesValidation = Yup.object().shape({
-      title: Yup.string().required(),
+      title: Yup.string().required().trim(),
       year: Yup.number().required().positive().integer().max(year),
-      price: Yup.number().required().positive(),
-      company: Yup.string().required()
+      price: Yup.number().required().min(0),
+      company: Yup.string().required(),
+      description: Yup.string().required().max(700),
+      imageLink: Yup.string().required().url(),
+      officialWebsiteLink: Yup.string().url()
     })
   }
 }
-
 const Validator = new Validation();
 
 export default Validator;

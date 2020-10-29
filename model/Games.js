@@ -3,6 +3,12 @@
   import dbConnection from '../database/connection'
 
 const Games = dbConnection.define('games', {
+  id: {
+    type: Sequelize.INTEGER,
+    primaryKey: true,
+    autoIncrement: true,
+    allowNull: false
+  },
   title: {
     type: Sequelize.STRING,
     allowNull: false
@@ -18,10 +24,29 @@ const Games = dbConnection.define('games', {
   company:{
     type: Sequelize.STRING,
     allowNull: true
+  },
+  imageLink:{
+    type: Sequelize.STRING,
+    allowNull: false
+  },
+  description:{
+    type: Sequelize.TEXT,
+    allowNull: false
+  },
+  officialWebsiteLink:{
+    type: Sequelize.STRING,
+    allowNull: true
+  },
+  createdAt:{
+    type: Sequelize.DATE,
+    allowNull: false
+  },
+  updatedAt:{
+    type: Sequelize.DATE,
+    allowNull: false
   }
 })
-
-/*  Games.sync({foce: false})  */
+  /* Games.sync({force: true}) */
 
 export default Games;
 

@@ -8,15 +8,13 @@
   import Validator from '../validators/validation'
 
 router.get('/', async (req, res) => {
-  req.loggedUser && res.send(req.loggedUser);
   try {
-    const gamesReturned = await Games.findAll();  //Founding games
+    const gamesReturned = await Games.findAll({order: [['year','desc']]}); 
     gamesReturned ? res.status(200).json(gamesReturned) : res.sendStatus(204);
   } catch (err) {
     console.log(err);
     return res.sendStatus(400);
   }
-  
 })
 router.get('/:id', async (req, res) => {
   let { id } = req.params;
@@ -24,15 +22,12 @@ router.get('/:id', async (req, res) => {
   if(isNaN(id)) res.sendStatus(400); //Bad Request => Invalid data received
   else{
     try {
-      let idNumber = parseInt(id);
-
-      let gamesReturned  = await Games.findOne({where: {id: idNumber}}) //Founding unique game
+      let gamesReturned  = await Games.findOne({where: {id: id}}) //Founding unique game
       gamesReturned ? res.status(200).json(gamesReturned) : res.sendStatus(404);
     } catch (error) {
       res.sendStatus(500);
     }
   }
-  
 })
 
 router.post('/', Auth, async (req, res) => {
@@ -89,8 +84,4 @@ router.put('/:id', Auth, async (req, res) => {
 
 })
 
-
-router.post('/test', Auth, async (req, res) => {
-  res.send('Entrou;')
-})
 export default router;  
