@@ -1,0 +1,75 @@
+[
+  {
+    "title": "Assasin's Screed Valhalla",
+    "year": 2020,
+    "price": 199,
+    "company": "Ubisoft",
+    "imageLink": "https://cdn.europosters.eu/image/1300/posters/assassin-s-creed-valhalla-eivor-i96339.jpg",
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos consequuntur quod possimus doloribus eius quo veritatis pariatur vel, dignissimos delectus facere dolorem alias blanditiis sed suscipit, molestiae voluptas enim. Delectus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus alias accusantium nobis, quo culpa fugiat. Doloribus provident, nisi blanditiis assumenda reiciendis illo eius earum. Quas qui nihil harum praesentium asperiores.",
+    "officialWebsiteLink": "https://www.ubisoft.com/pt-br/game/assassins-creed/valhalla"
+  },
+  {
+    "title": "God of War III",
+    "year": 2010,
+    "price": 100,
+    "company": "Sony Computer Entertainment ",
+    "imageLink": "https://images-na.ssl-images-amazon.com/images/I/81bQ2gRlv7L.jpg",
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos consequuntur quod possimus doloribus eius quo veritatis pariatur vel, dignissimos delectus facere dolorem alias blanditiis sed suscipit, molestiae voluptas enim. Delectus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus alias accusantium nobis, quo culpa fugiat. Doloribus provident, nisi blanditiis assumenda reiciendis illo eius earum. Quas qui nihil harum praesentium asperiores.",
+    "officialWebsiteLink": "https://godofwar.playstation.com/"
+  },
+  {
+    "title": "FIFA 21",
+    "year": 2020,
+    "price": 299,
+    "company": "EA Sposrts",
+    "imageLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTDpd3gmkaL7iaRUtRGCJLjNChKQPTKNqESbQ&usqp=CAUg",
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos consequuntur quod possimus doloribus eius quo veritatis pariatur vel, dignissimos delectus facere dolorem alias blanditiis sed suscipit, molestiae voluptas enim. Delectus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus alias accusantium nobis, quo culpa fugiat. Doloribus provident, nisi blanditiis assumenda reiciendis illo eius earum. Quas qui nihil harum praesentium asperiores.",
+    "officialWebsiteLink": "https://www.ea.com/pt-br/games/fifa/fifa-21"
+  },
+  {
+    "title": "Fortnite",
+    "year": 2018,
+    "price": 0,
+    "company": "Epic Games",
+    "imageLink": "https://i.pinimg.com/236x/98/f0/40/98f0403398da259f940c6e60db5d1769.jpg",
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos consequuntur quod possimus doloribus eius quo veritatis pariatur vel, dignissimos delectus facere dolorem alias blanditiis sed suscipit, molestiae voluptas enim. Delectus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus alias accusantium nobis, quo culpa fugiat. Doloribus provident, nisi blanditiis assumenda reiciendis illo eius earum. Quas qui nihil harum praesentium asperiores.",
+    "officialWebsiteLink": "https://www.epicgames.com/fortnite/pt-BR/home"
+  },
+  {
+    "title": "Couter Strike (CSGO)",
+    "year": 2012,
+    "price": 0,
+    "company": "Valve Corporation",
+    "imageLink": "https://3.bp.blogspot.com/-VHYAS-v3hBY/W4TGosrav7I/AAAAAAAAGUw/ySVyoLlkd6A5pBHcyNjDbNwo1idP32BngCLcBGAs/w680/csgo-capa.jpg",
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos consequuntur quod possimus doloribus eius quo veritatis pariatur vel, dignissimos delectus facere dolorem alias blanditiis sed suscipit, molestiae voluptas enim. Delectus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus alias accusantium nobis, quo culpa fugiat. Doloribus provident, nisi blanditiis assumenda reiciendis illo eius earum. Quas qui nihil harum praesentium asperiores.",
+    "officialWebsiteLink": "https://blog.counter-strike.net/"
+  },
+  {
+    "title": "Forza Horizon 4",
+    "year": 2018,
+    "price": 99,
+    "company": "Playground Games",
+    "imageLink": "https://store-images.s-microsoft.com/image/apps.20615.14094456225993959.2d017079-463a-4bd6-ac7a-2fb4f65673e9.0faeefd3-4ad9-4634-98df-75b9aeb92d48",
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos consequuntur quod possimus doloribus eius quo veritatis pariatur vel, dignissimos delectus facere dolorem alias blanditiis sed suscipit, molestiae voluptas enim. Delectus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus alias accusantium nobis, quo culpa fugiat. Doloribus provident, nisi blanditiis assumenda reiciendis illo eius earum. Quas qui nihil harum praesentium asperiores.",
+    "officialWebsiteLink": "https://forzamotorsport.net/en-us/games/fh4"
+  },
+  {
+    "title": "Candy Crush",
+    "year": 2012,
+    "price": 0,
+    "company": "King",
+    "imageLink": "https://store-images.s-microsoft.com/image/apps.19770.13510798886202835.850647a4-273f-42dd-a98c-8504a5b01621.9a476f81-d96a-44be-b9b6-61553a331ec8",
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos consequuntur quod possimus doloribus eius quo veritatis pariatur vel, dignissimos delectus facere dolorem alias blanditiis sed suscipit, molestiae voluptas enim. Delectus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus alias accusantium nobis, quo culpa fugiat. Doloribus provident, nisi blanditiis assumenda reiciendis illo eius earum. Quas qui nihil harum praesentium asperiores.",
+    "officialWebsiteLink": "https://king.com/pt_BR/game/candycrush"
+  },
+  {
+    "title": "Clash of Clans",
+    "year": 2012,
+    "price": 0,
+    "company": "Super Cell",
+    "imageLink": "https://static-cdn.jtvnw.net/ttv-boxart/Clash%20of%20Clans.jpg",
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos consequuntur quod possimus doloribus eius quo veritatis pariatur vel, dignissimos delectus facere dolorem alias blanditiis sed suscipit, molestiae voluptas enim. Delectus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus alias accusantium nobis, quo culpa fugiat. Doloribus provident, nisi blanditiis assumenda reiciendis illo eius earum. Quas qui nihil harum praesentium asperiores.",
+    "officialWebsiteLink": "https://clashofclans.com/"
+  }
+
+]
