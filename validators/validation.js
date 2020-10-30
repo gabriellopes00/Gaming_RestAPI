@@ -16,9 +16,9 @@ class Validation{
       year: Yup.number().required().positive().integer().max(year),
       price: Yup.number().required().min(0),
       company: Yup.string().required(),
-      description: Yup.string().required().max(700),
       imageLink: Yup.string().required().url(),
-      officialWebsiteLink: Yup.string().url()
+      officialWebsiteLink: Yup.string().url(),
+      description: Yup.string().required().max(700),
     })
   }
 }

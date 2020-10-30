@@ -12,7 +12,7 @@ This is API is running at port ``3333`` ```http://localhost:3333```;
 
 #### Clone
 ```bash
-git clone https://github.com/gabriellopes00/Happy.git
+git clone https://github.com/gabriellopes00/Games_RestAPI.git
 ```
 
 #### Running with yarn 🐿

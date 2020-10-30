@@ -8,7 +8,7 @@ async function Login(userData, validaPassword, res) {
   try {
     const isValid = await bcrypt.compare(userData.password, validaPassword);
     if(isValid){
-      jwt.sign({email: userData.email, id: userData.id}, jwtSecret, {expiresIn: '12h'}, (err, token) => {
+      jwt.sign({email: userData.email, id: userData.id}, jwtSecret, {expiresIn: '6h'}, (err, token) => {
         err ? res.sendStatus(500) : res.status(200).json({token: token});
       });
     }else res.sendStatus(401)

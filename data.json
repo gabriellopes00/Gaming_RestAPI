@@ -21,7 +21,7 @@
     "title": "FIFA 21",
     "year": 2020,
     "price": 299,
-    "company": "EA Sposrts",
+    "company": "EA Sports",
     "imageLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTDpd3gmkaL7iaRUtRGCJLjNChKQPTKNqESbQ&usqp=CAUg",
     "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos consequuntur quod possimus doloribus eius quo veritatis pariatur vel, dignissimos delectus facere dolorem alias blanditiis sed suscipit, molestiae voluptas enim. Delectus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus alias accusantium nobis, quo culpa fugiat. Doloribus provident, nisi blanditiis assumenda reiciendis illo eius earum. Quas qui nihil harum praesentium asperiores.",
     "officialWebsiteLink": "https://www.ea.com/pt-br/games/fifa/fifa-21"
@@ -70,6 +70,23 @@
     "imageLink": "https://static-cdn.jtvnw.net/ttv-boxart/Clash%20of%20Clans.jpg",
     "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos consequuntur quod possimus doloribus eius quo veritatis pariatur vel, dignissimos delectus facere dolorem alias blanditiis sed suscipit, molestiae voluptas enim. Delectus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus alias accusantium nobis, quo culpa fugiat. Doloribus provident, nisi blanditiis assumenda reiciendis illo eius earum. Quas qui nihil harum praesentium asperiores.",
     "officialWebsiteLink": "https://clashofclans.com/"
+  },
+  {    
+    "title": "Clash Royale",
+    "company": "Super Cell",
+    "year" : 2016,
+    "price": 0,
+    "officialWebsiteLink": "https://clashroyale.com/pt/",
+    "imageLink": "https://static-cdn.jtvnw.net/ttv-boxart/Clash%20Royale.jpg",
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos consequuntur quod possimus doloribus eius quo veritatis pariatur vel, dignissimos delectus facere dolorem alias blanditiis sed suscipit, molestiae voluptas enim. Delectus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus alias accusantium nobis, quo culpa fugiat. Doloribus provident, nisi blanditiis assumenda reiciendis illo eius earum. Quas qui nihil harum praesentium asperiores."  
+  },
+  {    
+    "title": "Among Us",
+    "company": "InnerSloth",
+    "year" : 2018,
+    "price": 0,
+    "officialWebsiteLink": "http://www.innersloth.com/gameAmongUs.php",
+    "imageLink": "https://static-cdn.jtvnw.net/ttv-boxart/Among%20Us.jpg",
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos consequuntur quod possimus doloribus eius quo veritatis pariatur vel, dignissimos delectus facere dolorem alias blanditiis sed suscipit, molestiae voluptas enim. Delectus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus alias accusantium nobis, quo culpa fugiat. Doloribus provident, nisi blanditiis assumenda reiciendis illo eius earum. Quas qui nihil harum praesentium asperiores."  
   }
-
 ]

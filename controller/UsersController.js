@@ -16,13 +16,17 @@
 router.post('/', async (req, res) => {
   let data = req.body;
     try {
-      await Validator.userValidation.validate(data);
+      const alreadyRegistered = await Users.findOne({where: {email: data.email}});
+      if(!alreadyRegistered){
+        await Validator.userValidation.validate(data);
+              
+        const salt = bcrypt.genSaltSync(10);
+        data.password = bcrypt.hashSync(data.password, salt);
+        
+        await Users.create(data);
+        res.sendStatus(201);
+      }else res.sendStatus(400)
       
-      const salt = bcrypt.genSaltSync(10);
-      data.password = bcrypt.hashSync(data.password, salt);
-       
-      await Users.create(data);
-      res.sendStatus(201);
     } catch (error) {
       console.log(error);
       error.name === 'ValidationError' ? res.sendStatus(400) : res.sendStatus(500);

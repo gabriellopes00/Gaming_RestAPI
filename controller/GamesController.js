@@ -31,7 +31,7 @@ router.get('/:id', async (req, res) => {
 })
 
 router.post('/', Auth, async (req, res) => {
-  const data = req.body;
+  const {data} = req.body;
   //Request Validation
   try {
     await Validator.gamesValidation.validate(data); //Validation
@@ -71,7 +71,7 @@ router.put('/:id', Auth, async (req, res) => {
       let game = await Games.findOne({where: {id: id}});    
       !game && res.sendStatus(404);
 
-      const data = req.body;
+      const {data} = req.body;
       await Validator.gamesValidation.validate(data);
       await Games.update(data, {where: {id: id}})
       res.sendStatus(200)
