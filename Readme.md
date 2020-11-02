@@ -86,7 +86,7 @@ Exemple:
 ]
 ```
 ###### Bad Request 400 ```Bad Request```
-This answer is returned if something bad happened on the server or if the route putted on the url field is doesn't exist. 
+This answer is returned if the request is not valid. 
 
 ###### Internal server error 500 ```Internal server error```
 This answer is returned if something bad happened on the server or if the route putted on the url field is doesn't exist.
