@@ -22,9 +22,31 @@ router.get('/:id', async (req, res) => {
   if(isNaN(id)) res.sendStatus(400); //Bad Request => Invalid data received
   else{
     try {
-      let gamesReturned  = await Games.findOne({where: {id: id}}) //Founding unique game
-      gamesReturned ? res.status(200).json(gamesReturned) : res.sendStatus(404);
+      let gameReturned  = await Games.findOne({where: {id: id}}) //Founding unique game
+      if (gameReturned) {
+        const links = [
+          { 
+            href: `http://localhost:3333/games/${gameReturned.id}`,
+            method: 'DELETE',
+            rel: 'Delete_game' 
+          },
+          { 
+            href: `http://localhost:3333/games/${gameReturned.id}`,
+            method: 'PUT',
+            rel: 'Update_game' 
+          },
+          { 
+            href: `http://localhost:3333/games/`,
+            method: 'GET',
+            rel: 'show_all_games' 
+          }
+        ]
+         res.status(200).json({game: gameReturned, _links: links})
+      } else {
+        res.sendStatus(404)
+      }
     } catch (error) {
+      console.log(error);
       res.sendStatus(500);
     }
   }
