@@ -18,15 +18,15 @@ git clone https://github.com/gabriellopes00/Games_RestAPI.git
 #### Running with yarn 🐿
 ```ssh
 cd Games_APiRest
-yarn install
-yarn dev
+$ yarn install
+$ yarn dev
 ```
 
 #### Running with npm 🔧
 ```ssh
-cd Games_APiRest
-npm install
-npm run dev
+$ cd Games_APiRest
+$ npm install
+$ npm run dev
 ```
 
 ## Contact 📱
@@ -234,7 +234,7 @@ This answer will be returned if the user was created successfully.
 
 <hr>
 
-#### */users/:id*
+#### */users/:email*
 This route will log the user in the application returning the generated token.
 
 ##### - Parameters
